@@ -16,6 +16,7 @@ In this project, we will deploy a web application on an Amazon EC2 instance usin
    - git commit -m "This is my code"
    - git push origin master
    You can see your files are in your CodeCommit repository
+
 ![image](https://github.com/IshikaSahu/Deploying-a-Web-App-on-EC2-using-CI-CD-Pipeline/assets/71627396/a7d5c5de-a1a5-4598-827f-0f51db5263b2)
 
 2. **CodeBuild Project:**
