@@ -1,6 +1,7 @@
 # Deploying a Web App on EC2 Using CI/CD Pipeline with S3 Integration.
 
 **Introduction:**
+
 In this project, we will deploy a web application on an Amazon EC2 instance using a Continuous Integration and Continuous Deployment (CI/CD) pipeline. We will utilize AWS CodeCommit, AWS CodeBuild, AWS CodeDeploy, and S3 bucket to achieve this. The web application, named "User Details Form," collects user information such as full name, email ID, mobile number, and address. When a user submits the form, the data is stored in an S3 bucket, triggering a Lambda function called "sending_email" that sends a notification email to the designated email address.
 
 **Components:**
@@ -193,4 +194,5 @@ def lambda_handler(event, context):
 ![image](https://github.com/IshikaSahu/Deploying-a-Web-App-on-EC2-using-CI-CD-Pipeline/assets/71627396/0d5e2402-60a5-4e2f-af1f-6bfcd25c08ed)
 
 **Conclusion:**
+
 Through the integrated CI/CD pipeline, the "User Details Form" web application is deployed on the EC2 instance `ish-user-details-app`. Users can submit their details, which are stored in the `ish-form-data` S3 bucket and trigger an email notification to the designated email address. This seamless process ensures efficient deployment and communication with the end-users.
