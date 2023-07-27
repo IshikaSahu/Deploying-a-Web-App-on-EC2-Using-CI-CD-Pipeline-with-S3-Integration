@@ -84,11 +84,11 @@ It will start deploying.
    = esc + :wq + enter
    - bash install.sh
 
-7. **AppSpec File:**
+6. **AppSpec File:**
    - The `appspec.yml` file, fetched from the S3 bucket in the zip file, will be used for installing the server and running the web application.
    The appspec.yml file is uploaded when we commited code.
 
-8. **CodePipeline:**
+7. **CodePipeline:**
    - Pipeline Name: `User_Details_Form_Pipeline`
    - Give source as CodeCommit and details
    - Give Choose AWS CloudPipeline
@@ -101,13 +101,13 @@ After deploy process done. Copy public Ip of EC2 instance and paste it in new ta
 
 ![image](https://github.com/IshikaSahu/Deploying-a-Web-App-on-EC2-using-CI-CD-Pipeline/assets/71627396/bba1d78c-62f6-4adc-ab48-f3a1b1c8d225)
 
-9. **Form Data Storage:**
+8. **Form Data Storage:**
    - Fill the details of user
    - When the user clicks on the submit button, the user details will be stored in an S3 bucket named `ish-form-data`.
 
 ![image](https://github.com/IshikaSahu/Deploying-a-Web-App-on-EC2-using-CI-CD-Pipeline/assets/71627396/53e9b7f8-273b-400a-af9e-56fb058b4a2a)  
 
-10. **Event Trigger and Lambda Function:**
+9. **Event Trigger and Lambda Function:**
    - An event is triggered when the form data is stored in `ish-form-data`.
    - A Lambda function named `sending_email` is executed.
    - The Lambda function fetches the email ID of the user from the form data.
@@ -188,7 +188,7 @@ def lambda_handler(event, context):
     else:
         print("Email address not found in the text file.")
 
-11. **Recieved Mail:**
+10. **Recieved Mail:**
 
 ![image](https://github.com/IshikaSahu/Deploying-a-Web-App-on-EC2-using-CI-CD-Pipeline/assets/71627396/0d5e2402-60a5-4e2f-af1f-6bfcd25c08ed)
 
