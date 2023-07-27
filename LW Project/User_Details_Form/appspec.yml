@@ -1,0 +1,15 @@
+version: 0.0
+os: linux
+files:
+  - source: /var/www/html/index.html
+    destination: /var/www/html/
+    permissions: '0644'
+hooks:
+  AfterInstall:
+    - location: install_nginx.sh
+      timeout: 300
+      runas: root
+  ApplicationStart:
+    - location: start_nginx.sh
+      timeout: 300
+      runas: root
